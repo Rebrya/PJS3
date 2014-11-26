@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+{% block head %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    
+    {% block stylesheet %}
+    	<link rel="stylesheet" href="{{ asset('bundles/machouilleportail/css/bootstrap.css') }}" />
+    	<link rel="stylesheet" href="{{ asset('bundles/machouilleportail/css/bootstrap-theme.min.css') }}" />
+    {% endblock stylesheet %}
+    
+	<title>{% block title 'Le portail de Machouille' %}</title>
+{% endblock head%}
+
+<body>
+{% block body %}
+
+	
+	{% block toolbar %}
+		{% include 'MachouillePortailBundle:Portail:toolbar.html.twig' %}
+	{% endblock toolbar %}
+	
+	{% block header %}
+		{% include 'MachouillePortailBundle:Portail:header.html.twig' %}
+	{% endblock header %}
+	
+	<div class="container">
+		{% block content %}
+		{% endblock content %}
+	</div>
+	
+	{% block footer %}
+	 	{% include 'MachouillePortailBundle:Portail:footer.html.twig' %}
+	{% endblock %} 
+	
+{% endblock %}
+
+{% block scripte %}
+{% endblock scripte %}
+<body>
