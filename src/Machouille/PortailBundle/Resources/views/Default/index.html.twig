@@ -3,4 +3,7 @@
 {% block content %}
 {{ parent() }}
 Hello !
+{% for p in produit %}
+	{{ p.id }} : {{ p.codeproduit }} <br>
+{% endfor %}
 {% endblock %}

@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'D:/App/wamp/www/Pjs3/PJS3/app/config/routing_dev.yml'
+    resource: 'D:/App/wamp/www/PJS3/app/config/routing_dev.yml'
