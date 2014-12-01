@@ -17,11 +17,11 @@
 
 	
 	{% block toolbar %}
-		{% include 'MachouillePortailBundle:Portail:toolbar.html.twig' %}
+		{% include 'MachouillePortailBundle:Portail:Module/toolbar.html.twig' %}
 	{% endblock toolbar %}
 	
 	{% block header %}
-		{% include 'MachouillePortailBundle:Portail:header.html.twig' %}
+		{% include 'MachouillePortailBundle:Portail:Module/header.html.twig' %}
 	{% endblock header %}
 	
 	<div class="container">
@@ -30,11 +30,12 @@
 	</div>
 	
 	{% block footer %}
-	 	{% include 'MachouillePortailBundle:Portail:footer.html.twig' %}
+	 	{% include 'MachouillePortailBundle:Portail:Module/footer.html.twig' %}
 	{% endblock %} 
 	
 {% endblock %}
 
 {% block scripte %}
 {% endblock scripte %}
-<body>
+</body>
+</html>

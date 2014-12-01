@@ -15,7 +15,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 class SecuredController extends Controller
 {
     /**
-     * @Route("/login", name="_demo_login")
+     * @Route("/login", name="machouille_portail_login")
      * @Template()
      */
     public function loginAction(Request $request)

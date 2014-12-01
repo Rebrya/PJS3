@@ -128,145 +128,30 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'machouille_portail_homepage');
             }
 
-            return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_homepage',);
+            return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\ProduitController::indexAction',  '_route' => 'machouille_portail_homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/log')) {
-            // machouille_portail_login
-            if ($pathinfo === '/login') {
-                return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_login',);
-            }
-
-            // machouille_portail_logout
-            if ($pathinfo === '/logout') {
-                return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_logout',);
-            }
-
-        }
-
-        if (0 === strpos($pathinfo, '/profile')) {
-            // machouille_portail_profile
-            if ($pathinfo === '/profile') {
-                return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_profile',);
-            }
-
-            // machouille_portail_profileEdit
-            if ($pathinfo === '/profile_edit') {
-                return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_profileEdit',);
-            }
-
-        }
-
-        if (0 === strpos($pathinfo, '/catalogue')) {
-            // machouille_portail_catalogue
-            if (preg_match('#^/catalogue/(?P<catalogue>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'machouille_portail_catalogue')), array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',));
-            }
-
-            // machouille_portail_produit
-            if (0 === strpos($pathinfo, '/catalogue/produit') && preg_match('#^/catalogue/produit/(?P<idproduit>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'machouille_portail_produit')), array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',));
-            }
-
-        }
-
-        if (0 === strpos($pathinfo, '/pannier')) {
-            // machouille_portail_pannier
-            if ($pathinfo === '/pannier') {
-                return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_pannier',);
-            }
-
-            // machouille_portail_produitSuppr
-            if (0 === strpos($pathinfo, '/pannier/suppr') && preg_match('#^/pannier/suppr/(?P<idproduit>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'machouille_portail_produitSuppr')), array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',));
-            }
-
-            // machouille_portail_produitAdd
-            if (0 === strpos($pathinfo, '/pannier/add') && preg_match('#^/pannier/add/(?P<idproduit>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'machouille_portail_produitAdd')), array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',));
-            }
-
-        }
-
-        // machouille_portail_comfirmeAchat
-        if ($pathinfo === '/comfirmeAchat') {
-            return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_comfirmeAchat',);
-        }
-
-        // machouille_portail_speciale
-        if ($pathinfo === '/speciale') {
-            return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\DefaultController::indexAction',  '_route' => 'machouille_portail_speciale',);
-        }
-
-        // _welcome
-        if (rtrim($pathinfo, '/') === '') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', '_welcome');
-            }
-
-            return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\WelcomeController::indexAction',  '_route' => '_welcome',);
-        }
-
-        if (0 === strpos($pathinfo, '/demo')) {
-            if (0 === strpos($pathinfo, '/demo/secured')) {
-                if (0 === strpos($pathinfo, '/demo/secured/log')) {
-                    if (0 === strpos($pathinfo, '/demo/secured/login')) {
-                        // _demo_login
-                        if ($pathinfo === '/demo/secured/login') {
-                            return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::loginAction',  '_route' => '_demo_login',);
-                        }
-
-                        // _demo_security_check
-                        if ($pathinfo === '/demo/secured/login_check') {
-                            return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::securityCheckAction',  '_route' => '_demo_security_check',);
-                        }
-
-                    }
-
-                    // _demo_logout
-                    if ($pathinfo === '/demo/secured/logout') {
-                        return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::logoutAction',  '_route' => '_demo_logout',);
-                    }
-
-                }
-
-                if (0 === strpos($pathinfo, '/demo/secured/hello')) {
-                    // acme_demo_secured_hello
-                    if ($pathinfo === '/demo/secured/hello') {
-                        return array (  'name' => 'World',  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::helloAction',  '_route' => 'acme_demo_secured_hello',);
-                    }
-
-                    // _demo_secured_hello
-                    if (preg_match('#^/demo/secured/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => '_demo_secured_hello')), array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::helloAction',));
-                    }
-
-                    // _demo_secured_hello_admin
-                    if (0 === strpos($pathinfo, '/demo/secured/hello/admin') && preg_match('#^/demo/secured/hello/admin/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => '_demo_secured_hello_admin')), array (  '_controller' => 'Acme\\DemoBundle\\Controller\\SecuredController::helloadminAction',));
-                    }
-
-                }
-
-            }
-
-            // _demo
-            if (rtrim($pathinfo, '/') === '/demo') {
+        if (0 === strpos($pathinfo, '/login')) {
+            // machouille_portail_login_index
+            if (rtrim($pathinfo, '/') === '/login') {
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', '_demo');
+                    return $this->redirect($pathinfo.'/', 'machouille_portail_login_index');
                 }
 
-                return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::indexAction',  '_route' => '_demo',);
+                return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\UserController::loginAction',  '_route' => 'machouille_portail_login_index',);
             }
 
-            // _demo_hello
-            if (0 === strpos($pathinfo, '/demo/hello') && preg_match('#^/demo/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => '_demo_hello')), array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::helloAction',));
-            }
+            if (0 === strpos($pathinfo, '/login/log')) {
+                // machouille_portail_login_check
+                if ($pathinfo === '/login/login_check') {
+                    return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\UserController::securityCheckAction',  '_route' => 'machouille_portail_login_check',);
+                }
 
-            // _demo_contact
-            if ($pathinfo === '/demo/contact') {
-                return array (  '_controller' => 'Acme\\DemoBundle\\Controller\\DemoController::contactAction',  '_route' => '_demo_contact',);
+                // machouille_portail_logout
+                if ($pathinfo === '/login/logout') {
+                    return array (  '_controller' => 'Machouille\\PortailBundle\\Controller\\UserController::logoutAction',  '_route' => 'machouille_portail_logout',);
+                }
+
             }
 
         }

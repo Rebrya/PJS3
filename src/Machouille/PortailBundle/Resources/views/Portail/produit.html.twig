@@ -1,0 +1,9 @@
+{% extends "MachouillePortailBundle::layout.html.twig" %}
+
+{% block content %}
+{{ parent() }}
+Hello !<br>
+{% for p in produit %}
+	{{ p.id }} : {{ p.codeproduit }} <br>
+{% endfor %}
+{% endblock %}

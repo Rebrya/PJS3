@@ -3529,7 +3529,7 @@ class appDevDebugProjectContainer extends Container
             'kernel.root_dir' => 'D:/App/wamp/www/PJS3/app',
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
-            'kernel.name' => 'app',
+            'kernel.name' => 'ap_',
             'kernel.cache_dir' => 'D:/App/wamp/www/PJS3/app/cache/dev',
             'kernel.logs_dir' => 'D:/App/wamp/www/PJS3/app/logs',
             'kernel.bundles' => array(
@@ -3980,7 +3980,7 @@ class appDevDebugProjectContainer extends Container
             'assetic.variables' => array(
 
             ),
-            'assetic.java.bin' => 'C:\\ProgramData\\Oracle\\Java\\javapath\\java.EXE',
+            'assetic.java.bin' => 'D:/App/Java/jre1.8.0_20/bin\\java.EXE',
             'assetic.node.bin' => '/usr/bin/node',
             'assetic.ruby.bin' => '/usr/bin/ruby',
             'assetic.sass.bin' => '/usr/bin/sass',

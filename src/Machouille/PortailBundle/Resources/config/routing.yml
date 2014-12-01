@@ -1,48 +1,56 @@
 machouille_portail_homepage:
     path:     /
-    defaults: { _controller: "MachouillePortailBundle:Default:index" }
+    defaults: { _controller: "MachouillePortailBundle:Produit:index" }
     
-machouille_portail_login:
-    path:     /login
-    defaults: { _controller: "MachouillePortailBundle:Default:index" }
-    
-machouille_portail_logout:
-    path:     /logout
-    defaults: { _controller: "MachouillePortailBundle:Default:index" }
-    
-machouille_portail_profile:
-    path:     /profile
-    defaults: { _controller: "MachouillePortailBundle:Default:index" }
-
-machouille_portail_profileEdit:
-    path:     /profile_edit
-    defaults: { _controller: "MachouillePortailBundle:Default:index" }
-    
-machouille_portail_catalogue:
-    path:     /catalogue/{catalogue}
-    defaults: { _controller: "MachouillePortailBundle:Default:index" }
+machouille_portail_user:
+    resource: "@MachouillePortailBundle/Controller/UserController.php"
+    type: annotation
     
 machouille_portail_produit:
-    path:     /catalogue/produit/{idproduit}
-    defaults: { _controller: "MachouillePortailBundle:Default:index"}
+    resource: "@MachouillePortailBundle/Controller/ProduitController.php"
+    type: annotation
     
-machouille_portail_pannier:
-    path:     /pannier
-    defaults: { _controller: "MachouillePortailBundle:Default:index"}
-
-machouille_portail_produitSuppr:
-    path:     /pannier/suppr/{idproduit}
-    defaults: { _controller: "MachouillePortailBundle:Default:index"}
-    
-machouille_portail_produitAdd:
-    path:     /pannier/add/{idproduit}
-    defaults: { _controller: "MachouillePortailBundle:Default:index"}
-    
-machouille_portail_comfirmeAchat:
-    path:     /comfirmeAchat
-    defaults: { _controller: "MachouillePortailBundle:Default:index"}
-    
-machouille_portail_speciale:
-    path:     /speciale
-    defaults: { _controller: "MachouillePortailBundle:Default:index"}
+#machouille_portail_login:
+#    path:     /login
+#    defaults: { _controller: "MachouillePortailBundle:Default:index" }
+#    
+#machouille_portail_logout:
+#    path:     /logout
+#    defaults: { _controller: "MachouillePortailBundle:Default:index" }
+#    
+#machouille_portail_profile:
+#    path:     /profile
+#    defaults: { _controller: "MachouillePortailBundle:Default:index" }
+#
+#machouille_portail_profileEdit:
+#    path:     /profile_edit
+#    defaults: { _controller: "MachouillePortailBundle:Default:index" }
+#    
+#machouille_portail_catalogue:
+#    path:     /catalogue/{catalogue}
+#    defaults: { _controller: "MachouillePortailBundle:Default:index" }
+#    
+#machouille_portail_produit:
+#    path:     /catalogue/produit/{idproduit}
+#    defaults: { _controller: "MachouillePortailBundle:Default:index"}
+#    
+#machouille_portail_pannier:
+#    path:     /pannier
+#    defaults: { _controller: "MachouillePortailBundle:Default:index"}
+#
+#machouille_portail_produitSuppr:
+#    path:     /pannier/suppr/{idproduit}
+#    defaults: { _controller: "MachouillePortailBundle:Default:index"}
+#    
+#machouille_portail_produitAdd:
+#    path:     /pannier/add/{idproduit}
+#    defaults: { _controller: "MachouillePortailBundle:Default:index"}
+#    
+#machouille_portail_comfirmeAchat:
+#    path:     /comfirmeAchat
+#    defaults: { _controller: "MachouillePortailBundle:Default:index"}
+#    
+#machouille_portail_speciale:
+#    path:     /speciale
+#    defaults: { _controller: "MachouillePortailBundle:Default:index"}
     
