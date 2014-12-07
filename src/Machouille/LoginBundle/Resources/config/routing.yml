@@ -1,0 +1,7 @@
+machouille_login_homepage:
+    path:     /login
+    defaults: { _controller: "MachouilleLoginBundle:Login:index" }
+
+machouille_login_register:
+    path:     /register
+    defaults: { _controller: "MachouilleLoginBundle:Login:register" }

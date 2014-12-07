@@ -1,0 +1,3 @@
+machouille_portail:
+    resource: "@MachouilleLoginBundle/Resources/config/routing.yml"
+    prefix:   /
