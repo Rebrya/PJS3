@@ -14,7 +14,13 @@ class LoginController extends Controller
     public function indexAction()
     {
     	$name = "Ren";
-    	$pw = "haha";
+    	$pw = "hahaha";
+    	
+    	$str = 'apple';
+    	
+    	if (md5($str) === '1f3870be274f6c49b3e31a0c6728957f') {
+    		echo "Voulez-vous une golden ou une spartan?";
+    	}
     	
     	$em = $this->getDoctrine()->getEntityManager();
     	$repo = $em->getRepository('MachouilleLoginBundle:Users');
@@ -42,7 +48,7 @@ class LoginController extends Controller
     				'constraints' => new Length(array('min' => 3))
     		))
     		->add("Lastname", 'text')
-    		->add('Email', 'text')
+    		->add('Email', 'email')
     		->add('Birthday', 'birthday')
     		->add('Address', 'text')
     		->add('City', 'text')
@@ -53,8 +59,10 @@ class LoginController extends Controller
     	
     	return $this->render('MachouilleLoginBundle::register.html.twig', array(
     			'form' => $form->createView(),
-    			
     	));
+    }
+    
+    public function registerCheckAction(){
     	
     }
 }

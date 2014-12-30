@@ -122,6 +122,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // machouille_produit_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'machouille_produit_homepage');
+            }
+
+            return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::indexAction',  '_route' => 'machouille_produit_homepage',);
+        }
+
         // machouille_login_homepage
         if ($pathinfo === '/login') {
             return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::indexAction',  '_route' => 'machouille_login_homepage',);

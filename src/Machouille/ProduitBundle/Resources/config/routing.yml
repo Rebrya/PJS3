@@ -1,0 +1,3 @@
+machouille_produit_homepage:
+    path:     /
+    defaults: { _controller: "MachouilleProduitBundle:Produit:index" }

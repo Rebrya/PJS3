@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{% block title %}Machouille{% endblock %}</title>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('bundles/machouilleproduit/css/main.css') }}" type="text/css" media="screen and (min-width: 800px)" />
+{% endblock %}
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+<body>
+	{% include('MachouilleProduitBundle:Produit:Modules/toolbar.html.twig')%}
+	{% include('MachouilleProduitBundle:Produit:Modules/header.html.twig')%}
+	
+	{% block body %}{% endblock %}
+	
+	{% include('MachouilleProduitBundle:Produit:Modules/nav.html.twig')%}
+	{% include('MachouilleProduitBundle:Produit:Modules/footer.html.twig')%}
+	
+	{% block javascripts %}
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="{{ asset('bundles/machouilleproduit/js/menu.js') }}"></script>
+	{% endblock %}
+</body>
+
+</html>

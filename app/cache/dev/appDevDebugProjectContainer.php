@@ -3037,6 +3037,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('D:\\App\\wamp\\www\\PJS3\\vendor\\symfony\\swiftmailer-bundle\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', 'Swiftmailer');
         $instance->addPath('D:\\App\\wamp\\www\\PJS3\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
         $instance->addPath('D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\LoginBundle/Resources/views', 'MachouilleLogin');
+        $instance->addPath('D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views', 'MachouilleProduit');
         $instance->addPath('D:\\App\\wamp\\www\\PJS3\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('D:\\App\\wamp\\www\\PJS3\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
         $instance->addPath('D:/App/wamp/www/PJS3/app/Resources/views');
@@ -3507,6 +3508,7 @@ class appDevDebugProjectContainer extends Container
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'MachouilleLoginBundle' => 'Machouille\\LoginBundle\\MachouilleLoginBundle',
+                'MachouilleProduitBundle' => 'Machouille\\ProduitBundle\\MachouilleProduitBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
                 'SensioGeneratorBundle' => 'Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle',

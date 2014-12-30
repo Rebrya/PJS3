@@ -17,6 +17,7 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="MachouilleLoginBundle">Machouille\LoginBundle\MachouilleLoginBundle</parameter>
+      <parameter key="MachouilleProduitBundle">Machouille\ProduitBundle\MachouilleProduitBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
@@ -2824,6 +2825,10 @@
       <call method="addPath">
         <argument>D:\App\wamp\www\PJS3\src\Machouille\LoginBundle/Resources/views</argument>
         <argument>MachouilleLogin</argument>
+      </call>
+      <call method="addPath">
+        <argument>D:\App\wamp\www\PJS3\src\Machouille\ProduitBundle/Resources/views</argument>
+        <argument>MachouilleProduit</argument>
       </call>
       <call method="addPath">
         <argument>D:\App\wamp\www\PJS3\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>
