@@ -85,7 +85,6 @@
   'MachouilleProduitBundle:Produit:contactnous.html.twig' => 'D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views/Produit/contactnous.html.twig',
   'MachouilleProduitBundle:Produit/Modules:footer.html.twig' => 'D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views/Produit/Modules/footer.html.twig',
   'MachouilleProduitBundle:Produit/Modules:header.html.twig' => 'D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views/Produit/Modules/header.html.twig',
-  'MachouilleProduitBundle:Produit/Modules:nav.html.twig' => 'D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views/Produit/Modules/nav.html.twig',
   'MachouilleProduitBundle:Produit/Modules:toolbar.html.twig' => 'D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views/Produit/Modules/toolbar.html.twig',
   'MachouilleProduitBundle:Produit:panier.html.twig' => 'D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views/Produit/panier.html.twig',
   'MachouilleProduitBundle:Produit:produit.html.twig' => 'D:\\App\\wamp\\www\\PJS3\\src\\Machouille\\ProduitBundle/Resources/views/Produit/produit.html.twig',

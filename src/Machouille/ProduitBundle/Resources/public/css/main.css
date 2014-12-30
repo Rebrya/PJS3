@@ -12,8 +12,11 @@
 }
 
 body {
-	min-width: 70em;
 	line-height: 19.5px;
+	display: block;
+	background-image: url(../images/background-body.jpg);
+	background-size: 1024px 909px;
+	background-repeat: repeat-x;
 	background-attachment: fixed;
 }
 
@@ -89,6 +92,16 @@ a {
 a:hover {
 	color: #03ae87;
 }
+
+.container {
+	margin: auto;
+	width: 1200px;
+}
+
+.right {
+	float: right;
+}
+
 /* ---------------------------------------------------
    toolbar
 --------------------------------------------------- */
@@ -125,6 +138,7 @@ a:hover {
 header {
 	margin-top: 2em;
 	display: block;
+	background-color: white;
 }
 
 #logo {
@@ -133,30 +147,24 @@ header {
 		url(/PJS3/web/bundles/machouilleproduit/images/background-header.jpg);
 	background-repeat: no-repeat;
 	background-position: right;
+	color: #5a3a23;
 }
 
 #logo h1{
-	padding: 1em 1em 0 1em;
+	padding: 1em 1em 1em 3em;
 	font-size: 2em;
 	text-decoration: underline;
 }
 
 #logo h4{
-	padding: 2em;
-	text-decoration: underline;
-}
-
-@media screen and (min-width: 1200px) {
-	#cssmenu ul {
-		width: 1200px;
-	}
+	padding-left: 8em;
 }
 
 #cssmenu {
 	position: relative;
-	margin: auto;
 	height: 44px;
 	background: #ffff80;
+	border-bottom: 2px solid #5a3a23;
 }
 
 #cssmenu ul {
@@ -230,6 +238,7 @@ header {
 
 #cssmenu>ul>li:hover>a {
 	color: #a5935a;
+	background-color: #5a3a23;
 }
 
 #cssmenu li.has-sub::after {
@@ -535,15 +544,26 @@ header {
 	}
 }
 
+#recherche input[type=text] {
+	margin: 10px 1em 0 0;
+	height: 24px;
+}
+
+#recherche input[type=submit]{
+	margin: 1em 10em 0 0;
+	padding: 4px;
+	background-color:#5a3a23; 
+	color: white;
+}
 /* ---------------------------------------------------
    main-page
 --------------------------------------------------- */
 #main-page {
 	display: block;
-	min-height: 40em;
-	background-image: url(../images/background-main-page.jpg);
-	background-size: 1024px 909px;
+	min-height: 45em;
+	background-image: url(../images/background-main-bottom.png);
 	background-repeat: repeat-x;
+	background-position: 100% 100%;
 }
 
 /* ---------------------------------------------------
@@ -553,20 +573,15 @@ footer {
 }
 
 #footer-press{
-	height: 12em;
+	overflow: hidden;
 	background-color: #ffff80;
-}
-
-#footer-press-container{
-	margin: auto;
-	width: 1200px;
 }
 
 .block-footer {
 	float: left;
 	padding-left: 1em;
-	width: 260px;
-	height: 12em;
+	width: 280px;
+	height: 14em;
 	border-left: 1px solid #5a3a23;
 	border-right: 1px solid #5a3a23;
 }
@@ -575,6 +590,16 @@ footer {
 	margin: 1em 0;
 	text-decoration: underline;
 }
+
+#reseau img {
+	float: left;
+}
+
+.block-footer p {
+	margin-top: 1em;
+	padding-top: 0.5em;
+	padding-left: 1em;
+	}
 
 #mention{
 	background-color: #5a3a23; 

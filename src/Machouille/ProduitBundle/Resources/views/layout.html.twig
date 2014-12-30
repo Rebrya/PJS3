@@ -15,12 +15,12 @@
 	
 	{% block body %}{% endblock %}
 	
-	{% include('MachouilleProduitBundle:Produit:Modules/nav.html.twig')%}
 	{% include('MachouilleProduitBundle:Produit:Modules/footer.html.twig')%}
 	
 	{% block javascripts %}
-	<!-- Latest compiled and minified JavaScript -->
+	<script src="{{ asset('bundles/machouilleproduit/js/jquery-2.1.1.js') }}"></script>
 	<script src="{{ asset('bundles/machouilleproduit/js/menu.js') }}"></script>
+	<script src="{{ asset('bundles/machouilleproduit/js/navnav.js') }}"></script>
 	{% endblock %}
 </body>
 
