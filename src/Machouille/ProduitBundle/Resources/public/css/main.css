@@ -564,6 +564,7 @@ header {
 	background-image: url(../images/background-main-bottom.png);
 	background-repeat: repeat-x;
 	background-position: 100% 100%;
+	background-color: white;
 }
 
 /* ---------------------------------------------------
@@ -616,5 +617,3 @@ footer {
 	float: left;
 	color: white;
 }
-
-

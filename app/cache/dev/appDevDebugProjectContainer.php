@@ -3495,7 +3495,7 @@ class appDevDebugProjectContainer extends Container
             'kernel.root_dir' => 'D:/App/wamp/www/PJS3/app',
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
-            'kernel.name' => 'ap_',
+            'kernel.name' => 'app',
             'kernel.cache_dir' => 'D:/App/wamp/www/PJS3/app/cache/dev',
             'kernel.logs_dir' => 'D:/App/wamp/www/PJS3/app/logs',
             'kernel.bundles' => array(
