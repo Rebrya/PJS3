@@ -1,0 +1,27 @@
+{% extends 'MachouilleProduitBundle::layout.html.twig' %} {% block
+stylesheets %} {{ parent() }}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouilleproduit/css/formulaire.css') }}"
+	type="text/css" media="screen and (min-width: 800px)" />
+{% endblock %} {% block title %}Le meilleur Chewing Gum du monde{%
+endblock %} {% block body %}
+<div id="main-page" class="container">
+	<div id="paiement" class="sub-container">
+		<form action="{{ path("machouille_produit_payerCheck") }}" method="post">
+			<label>Card number </label>
+			<input type="number" maxlenght=19>
+			<label>Expiration </label>
+			<input type="date">
+			<label>Card verification code </label>
+			<input type="number" maxlenght=3>
+			<label>Name </label>
+			<input type="text">
+			<input type="submit" value="Confirmer">
+		</form>
+	</div>
+	<div id="modepaiement" class="sub-container">
+		<img alt="" src="{{ asset('bundles/machouilleproduit/images/modes-paiement.png') }}">
+	</div>
+	
+</div>
+{% endblock %}

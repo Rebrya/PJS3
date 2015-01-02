@@ -353,6 +353,12 @@ class Users
     	return $this->salt;
     }
     
+     /**
+     * Set username
+     *
+     * @param string $username
+     * @return User
+     */
     public function setUsername(String $username){
     	$this->username = $username;
     	return $this;

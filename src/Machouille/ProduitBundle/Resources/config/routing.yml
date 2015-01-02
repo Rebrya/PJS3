@@ -1,3 +1,35 @@
 machouille_produit_homepage:
     path:     /
     defaults: { _controller: "MachouilleProduitBundle:Produit:index" }
+    
+machouille_produit_catalogue:
+    path:     /catalogue/{famille}
+    defaults: { _controller: "MachouilleProduitBundle:Produit:catalogue", famille: "Tri-goût"}
+
+machouille_produit_special:
+    path:     /special
+    defaults: { _controller: "MachouilleProduitBundle:Produit:special"}
+    
+machouille_produit_jeu:
+    path:     /jeu
+    defaults: { _controller: "MachouilleProduitBundle:Produit:jeu"}
+    
+machouille_produit_contact:
+    path:     /contact
+    defaults: { _controller: "MachouilleProduitBundle:Produit:contact"}
+
+machouille_produit_panier:
+    path:     /panier
+    defaults: { _controller: "MachouilleProduitBundle:Produit:panier"}
+    
+machouille_produit_paiement:
+    path:     /paiement
+    defaults: { _controller: "MachouilleProduitBundle:Produit:payer"}
+    
+machouille_produit_payerCheck:
+    path:     /paiement_check
+    defaults: { _controller: "MachouilleProduitBundle:Produit:payerConfirme"}
+ 
+machouille_produit_addpanier:
+    path:     /addpanier/{code}
+    defaults: { _controller: "MachouilleProduitBundle:Produit:addpanier"}

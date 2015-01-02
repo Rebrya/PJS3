@@ -1,0 +1,13 @@
+{% extends 'MachouilleProduitBundle::layout.html.twig' %} {% block
+stylesheets %} {{ parent() }}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouilleproduit/css/jeu.css') }}"
+	type="text/css" media="screen and (min-width: 800px)" />
+{% endblock %} {% block title %}Le meilleur Chewing Gum du monde{%
+endblock %} {% block body %}
+<div id="main-page" class="container">
+	<div id="jeu">
+		<img src="{{ asset('bundles/machouilleproduit/images/loading.gif') }}">
+	</div>
+</div>
+{% endblock %}

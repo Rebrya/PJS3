@@ -1,1 +1,31 @@
-Hello {{ name }}!
+{% extends 'MachouilleProduitBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('bundles/machouilleproduit/css/formulaire.css') }}" type="text/css" media="screen and (min-width: 800px)" />
+{% endblock %}
+
+{% block title %}Le meilleur Chewing Gum du monde{% endblock %}
+
+{% block body %}
+	<div id="main-page" class="container">
+		<div id="login" class="sub-container">
+			<form action="{{ path("machouille_login_check") }}" method="post">
+				{% if msgErreur is defined %}
+				<label class="erreur">{{ msgErreur }}</label>
+				{% endif %}
+				<label>Nom d'utilisateur</label>
+				<input type="text" name="username">
+				<label>Mot de passe</label>
+				<input type="password" name="password">
+				<input type="submit" value="Connecter">
+			</form>
+			<a href="">Mot de passe oublié ?</a>
+			<a href="{{ path('machouille_login_register') }}">Voulez-vous inscrire ?</a>
+		</div>
+		
+		<div class="sub-container">
+			<img alt="" src="{{ asset('bundles/machouilleproduit/images/login.jpg') }}">
+		</div>
+	</div>
+{% endblock %}

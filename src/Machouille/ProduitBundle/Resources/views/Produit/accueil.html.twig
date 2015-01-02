@@ -1,27 +1,46 @@
-{% extends 'MachouilleProduitBundle::layout.html.twig' %}
-
-{% block stylesheets %}
-	{{ parent() }}
-	<link rel="stylesheet" href="{{ asset('bundles/machouilleproduit/css/accueil.css') }}" type="text/css" media="screen and (min-width: 800px)" />
-{% endblock %}
-
-{% block title %}Le meilleur Chewing Gum du monde{% endblock %}
-
-{% block body %}
-	<div id="main-page" class="container">
-		<div id="special">
-			口口口
+{% extends 'MachouilleProduitBundle::layout.html.twig' %} {% block
+stylesheets %} {{ parent() }}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouilleproduit/css/accueil.css') }}"
+	type="text/css" media="screen and (min-width: 800px)" />
+{% endblock %} {% block title %}Le meilleur Chewing Gum du monde{%
+endblock %} {% block body %}
+<div id="main-page" class="container">
+	<div id="special" class="sub-container">
+		<h3>Les offres spécials</h3>
+		<div class="article">
+			<a href="{{ path("machouille_produit_special") }}">
+			<img alt="maxq" src="{{ asset('bundles/machouilleproduit/images/maxq.png') }}">
+			</a>
 		</div>
-		<div id="meilleur">
-			口口口
-		</div>
-		<div id="catalogue">
-			口口口
-		</div>
-		<div id="divers">
-			Plus de xxx produit
-			Livraison gratuit sous 72 heures
-			Paiement securisé
-		</div>		
 	</div>
+	
+	<div id="meilleur" class="sub-container">
+		<h3>Les meilleurs ventes</h3>
+		<div class="article">
+			<img alt="meilleur" src="{{ asset('bundles/machouilleproduit/images/meilleurs.png') }}">
+		</div>
+	</div>
+	
+	<div id="catalogue" class="sub-container">
+		<h3>Les familles de produit</h3>
+		<div class="article">
+			<a href="{{ path("machouille_produit_catalogue", {'famille': "Crémeux"}) }}">
+			<img alt="cremeux" src="{{ asset('bundles/machouilleproduit/images/creme.png') }}">
+			</a>
+			<a href="{{ path("machouille_produit_catalogue", {'famille': "Fruités"}) }}">
+			<img alt="fruite" src="{{ asset('bundles/machouilleproduit/images/fruit.png') }}">
+			</a>
+			<a href="{{ path("machouille_produit_catalogue", {'famille': "Tri-goût"}) }}">
+			<img alt="trigout" src="{{ asset('bundles/machouilleproduit/images/trigout.png') }}">
+			</a>
+		</div>
+	</div>
+	
+	<div id="divers">
+		<div class="block">Plus de 500 produits</div>
+		<div class="block">Livraison gratuit sous 72 heures</div>
+		<div class="block">Paiement securisé</div>
+	</div>
+</div>
 {% endblock %}

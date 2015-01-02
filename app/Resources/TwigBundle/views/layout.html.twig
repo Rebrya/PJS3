@@ -1,0 +1,8 @@
+{% extends 'MachouilleProduitBundle::layout.html.twig' %}
+
+{% block body %}
+		<div id="error_page">
+		    <h1>Oups! Une erreur est survenue</h1>
+		    <h2>Le serveur a retourné une erreur "{{ status_code }} {{ status_text }}".</h2>
+	    </div>
+{% endblock body %}

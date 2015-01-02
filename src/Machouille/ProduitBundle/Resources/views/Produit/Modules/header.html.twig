@@ -11,16 +11,16 @@
 	</div>
 	<div id='cssmenu'>
 		<ul class="container cssmenu">
-			<li><a href='#'><span>Accueil</span></a></li>
-			<li class='has-sub'><a href='#'><span>Catalogue</span></a>
+			<li><a href='{{ path("machouille_produit_homepage") }}'><span>Accueil</span></a></li>
+			<li class='has-sub'><a href='{{ path("machouille_produit_catalogue") }}'><span>Catalogue</span></a>
 				<ul>
-					<li><a href='#'><span>Trigoût</span></a></li>
-					<li><a href='#'><span>Crémeux</span></a></li>
-					<li><a href='#'><span>Fruité</span></a></li>
+					<li><a href='{{ path("machouille_produit_catalogue", {'famille': "Tri-goût"}) }}'><span>Trigoût</span></a></li>
+					<li><a href='{{ path("machouille_produit_catalogue", {'famille': "Crémeux"}) }}'><span>Crémeux</span></a></li>
+					<li><a href='{{ path("machouille_produit_catalogue", {'famille': "Fruités"}) }}'><span>Fruités</span></a></li>
 				</ul></li>
-			<li><a href='#'><span>Offre Spécial</span></a></li>
-			<li><a href='#'><span>Jouer avec nous</span></a></li>
-			<li><a href='#'><span>Contact</span></a></li>
+			<li><a href='{{ path("machouille_produit_special") }}'><span>Offre Spécial</span></a></li>
+			<li><a href='{{ path("machouille_produit_jeu") }}'><span>Jouer avec nous</span></a></li>
+			<li><a href='{{ path("machouille_produit_contact") }}'><span>Contact</span></a></li>
 		</ul>
 	</div>
 </header>

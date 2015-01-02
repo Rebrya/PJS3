@@ -1,0 +1,35 @@
+.sub-container {
+	margin: 2em auto;
+	width: 50em;
+}
+
+.sub-container h3 {
+	margin-bottom: 0.5em;
+	color: #5a3a23;
+	text-decoration: underline;
+}
+
+.article {
+	display: block;
+	height: 10em;
+	background-color: #ffff80;
+	border: 1px solid #5a3a23;
+}
+
+#catalogue img{
+	width: 262px;
+	height: 10em;
+}
+
+.block {
+	float: left;
+	margin-left: 5em;
+	margin-bottom: 5em;
+	padding: 2em 1em 0em 1em;
+	width: 11em;
+	height: 5em;
+	background-color: #ffff80;
+	font-size: 20px;
+	color: #5a3a23;
+	text-align: center;
+}

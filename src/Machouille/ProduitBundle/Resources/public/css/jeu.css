@@ -1,0 +1,10 @@
+#jeu {
+	margin: 1em auto;
+	width: 50em;
+	height: 35em;
+	background-color: black;
+}
+
+#jeu img{
+	margin: 18em 25em;
+}

@@ -131,14 +131,81 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::indexAction',  '_route' => 'machouille_produit_homepage',);
         }
 
-        // machouille_login_homepage
-        if ($pathinfo === '/login') {
-            return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::indexAction',  '_route' => 'machouille_login_homepage',);
+        // machouille_produit_catalogue
+        if (0 === strpos($pathinfo, '/catalogue') && preg_match('#^/catalogue(?:/(?P<famille>[^/]++))?$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'machouille_produit_catalogue')), array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::catalogueAction',  'famille' => 'Tri-goût',));
         }
 
-        // machouille_login_register
-        if ($pathinfo === '/register') {
-            return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::registerAction',  '_route' => 'machouille_login_register',);
+        // machouille_produit_special
+        if ($pathinfo === '/special') {
+            return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::specialAction',  '_route' => 'machouille_produit_special',);
+        }
+
+        // machouille_produit_jeu
+        if ($pathinfo === '/jeu') {
+            return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::jeuAction',  '_route' => 'machouille_produit_jeu',);
+        }
+
+        // machouille_produit_contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::contactAction',  '_route' => 'machouille_produit_contact',);
+        }
+
+        if (0 === strpos($pathinfo, '/pa')) {
+            // machouille_produit_panier
+            if ($pathinfo === '/panier') {
+                return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::panierAction',  '_route' => 'machouille_produit_panier',);
+            }
+
+            if (0 === strpos($pathinfo, '/paiement')) {
+                // machouille_produit_paiement
+                if ($pathinfo === '/paiement') {
+                    return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::payerAction',  '_route' => 'machouille_produit_paiement',);
+                }
+
+                // machouille_produit_payerCheck
+                if ($pathinfo === '/paiement_check') {
+                    return array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::payerConfirmeAction',  '_route' => 'machouille_produit_payerCheck',);
+                }
+
+            }
+
+        }
+
+        // machouille_produit_addpanier
+        if (0 === strpos($pathinfo, '/addpanier') && preg_match('#^/addpanier/(?P<code>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'machouille_produit_addpanier')), array (  '_controller' => 'Machouille\\ProduitBundle\\Controller\\ProduitController::addpanierAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/login')) {
+            // machouille_login_homepage
+            if ($pathinfo === '/login') {
+                return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::indexAction',  '_route' => 'machouille_login_homepage',);
+            }
+
+            // machouille_login_check
+            if ($pathinfo === '/login/check') {
+                return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::loginCheckAction',  '_route' => 'machouille_login_check',);
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/register')) {
+            // machouille_login_register
+            if ($pathinfo === '/register') {
+                return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::registerAction',  '_route' => 'machouille_login_register',);
+            }
+
+            // machouille_login_registerCheck
+            if ($pathinfo === '/register_check') {
+                return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::registerCheckAction',  '_route' => 'machouille_login_registerCheck',);
+            }
+
+        }
+
+        // machouille_login_logout
+        if ($pathinfo === '/login/logout') {
+            return array (  '_controller' => 'Machouille\\LoginBundle\\Controller\\LoginController::logoutAction',  '_route' => 'machouille_login_logout',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

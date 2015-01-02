@@ -2,6 +2,18 @@ machouille_login_homepage:
     path:     /login
     defaults: { _controller: "MachouilleLoginBundle:Login:index" }
 
+machouille_login_check:
+    path:     /login/check
+    defaults: { _controller: "MachouilleLoginBundle:Login:loginCheck" }
+
 machouille_login_register:
     path:     /register
     defaults: { _controller: "MachouilleLoginBundle:Login:register" }
+    
+machouille_login_registerCheck:
+    path:     /register_check
+    defaults: { _controller: "MachouilleLoginBundle:Login:registerCheck" }
+    
+machouille_login_logout:
+    path:     /login/logout
+    defaults: { _controller: "MachouilleLoginBundle:Login:logout" }

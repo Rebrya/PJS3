@@ -1,0 +1,67 @@
+.sub-container{
+	overflow: auto;
+	display: block;
+	margin: 3em;
+	padding: 1em;
+	border: 1px solid #5a3a23;
+	background-color: #c0c0c0;
+}
+
+.sub-container h3{
+	margin-bottom: 1em;
+	font-size: 2em;
+	color: #5a3a23;
+	text-decoration: underline;
+}
+
+.ligne {
+	padding: 1em;
+	height: 1em;
+	border-bottom: 1px dashed #5a3a23;
+}
+
+.elem {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+.designation {
+	width: 18em;
+}
+
+.quantite{
+	width: 5em;
+}
+
+.label {
+	background-color: #5a3a23;
+	color: white;
+}
+
+.label .elem{
+	text-decoration: underline;
+}
+
+input[type=submit] {
+	float: right;
+	margin-top: 1em;
+	padding: 0.5em;
+	background-color: #5a3a23;
+	color: white;
+}
+
+#total {
+	font-size: 1.5em
+}
+
+#total p{
+	font-size: 0.5em;
+	float: right;
+	margin-right: 9em;
+}
+
+#historique a{
+	float: none;
+	width: 100%;
+}

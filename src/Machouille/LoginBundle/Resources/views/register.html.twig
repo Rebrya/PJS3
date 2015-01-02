@@ -1,18 +1,30 @@
-{{ form_start(form)}}
+{% extends 'MachouilleProduitBundle::layout.html.twig' %}
 
-	{{ form_errors(form) }}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('bundles/machouilleproduit/css/formulaire.css') }}" type="text/css" media="screen and (min-width: 800px)" />
+{% endblock %}
 
-	{{ form_label(form.Firstname, 'Task Description') }}
-    {{ form_row(form.Firstname) }}
-    {{ form_row(form.Lastname) }}
-    {{ form_row(form.Email) }}
-    {{ form_row(form.Birthday) }}
-    {{ form_row(form.Address) }}
-    {{ form_row(form.City) }}
-    {{ form_row(form.Country) }}
-    {{ form_row(form.Username) }}
-    {{ form_row(form.Password) }}
+{% block title %}Le meilleur Chewing Gum du monde{% endblock %}
 
-    <input type="submit" />
-
-{{ form_end(form) }}
+{% block body %}
+	<div id="main-page" class="container">
+		<div id="register" class="sub-container">
+		{{ form_start(form)}}
+			{{ form_errors(form) }}
+		    {{ form_row(form.Firstname) }}
+		    {{ form_row(form.Lastname) }}
+		    {{ form_row(form.Email) }}
+		    {{ form_row(form.Birthday) }}
+		    {{ form_row(form.Address) }}
+		    {{ form_row(form.City) }}
+		    {{ form_row(form.Country) }}
+		    {{ form_row(form.Username) }}
+		    {{ form_row(form.Password) }}
+		{{ form_end(form) }}
+		</div>
+		<div class="sub-container">
+			<img alt="" src="{{ asset('bundles/machouilleproduit/images/login.jpg') }}">
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'MachouilleProduitBundle::layout.html.twig' %} {% block
+stylesheets %} {{ parent() }}
+<link rel="stylesheet"
+	href="{{ asset('bundles/machouilleproduit/css/panier.css') }}"
+	type="text/css" media="screen and (min-width: 800px)" />
+{% endblock %} {% block title %}Le meilleur Chewing Gum du monde{%
+endblock %} {% block body %}
+<div id="main-page" class="container">
+	<div id="panier" class="sub-container">
+		<h3>Panier</h3>
+		<div class="commande">
+				<div class="ligne label">
+					<p class="codeproduit elem">Code produit</p>
+					<p class="designation elem">Désignation</p>
+					<p class="quantite elem">Quantité</p>
+					<p class="prix elem">Prix unitaire</p>
+					<p class="prixtotal elem">Prix total</p>
+				</div>
+				
+				<form action="{{ path("machouille_produit_paiement") }}" method="post">
+				{% for commande in commandes %}
+					<div class="ligne">
+						<p class="codeproduit elem">{{ commande.codeproduit }}</p>
+						<p class="designation elem">{{ commande.designation }}</p>
+						<input type="number" value={{ commande.quantite }} class="quantite elem" maxlength="5" size="5">
+						<p class="prix elem">{{ commande.prix }} €</p>
+						<p class="prixtotal elem">{{ commande.quantite * commande.prix }} €</p>
+						<a href="">Supprimer</a>
+					</div>
+				{% endfor %}
+				<div id="total" class="ligne">Prix total de commande<p id="totalprix">150 €</p></div>
+				
+				<input type="submit" value="Valider Commande">
+				</form>
+		</div>
+	</div>
+	<div id="Historique" class="sub-container">
+		<h3>Historique</h3>
+		{% for his in historique %}
+			<a href="">Commande numéro : {{ his.idcommande }}, date du {{ his.date|date('Y-m-d') }},
+			 produit acheté : {{ his.codeproduit }}
+			 quantité : {{ his.quantite }}</a>
+			<br>
+		{% endfor %}
+		
+	</div>
+</div>
+
+<script>
+$( "input" )
+  .change(function () {
+    var str = "";
+    $( "select option:selected" ).each(function() {
+      str += $( this ).text() + " ";
+    });
+    $( "div" ).text( str );
+  })
+  .change();
+</script>
+
+{% endblock %}

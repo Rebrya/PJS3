@@ -1,5 +1,12 @@
 <div id="toolbar">
 	<div id="top-spliter"></div>
 	<a href="">langue</a>
-	<a href="">Inscription</a> <a href="">Connexion</a>
+{% if Username is defined %}
+	<a href="{{ path("machouille_login_logout") }}">Déconnexion</a>
+	<a href="{{ path("machouille_produit_panier") }}">Panier</a>
+	<a href="{{ path("machouille_produit_panier") }}">Bienvenue  {{ Username|capitalize}}</a>
+{% else %}
+	<a href="{{ path('machouille_login_register') }}">Inscription</a> 
+	<a href="{{ path('machouille_login_homepage') }}">Connexion</a>
+{% endif %}
 </div>
