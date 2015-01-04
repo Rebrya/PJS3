@@ -1,6 +1,6 @@
 <?php
 
-/* MachouilleProduitBundle:Produit/Modules:toolbar.html.twig */
+/* MachouilleProduitBundle:Produit:Modules/toolbar.html.twig */
 class __TwigTemplate_6608f4f1fccb92106c9e49e8971079feab86a0406c4d54be43bde30dd7d8a51b extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -55,7 +55,7 @@ class __TwigTemplate_6608f4f1fccb92106c9e49e8971079feab86a0406c4d54be43bde30dd7d
 
     public function getTemplateName()
     {
-        return "MachouilleProduitBundle:Produit/Modules:toolbar.html.twig";
+        return "MachouilleProduitBundle:Produit:Modules/toolbar.html.twig";
     }
 
     public function isTraitable()

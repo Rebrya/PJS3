@@ -26,9 +26,10 @@ endblock %} {% block body %}
 						<p class="prix elem">{{ commande.prix }} €</p>
 						<p class="prixtotal elem">{{ commande.quantite * commande.prix }} €</p>
 						<a href="">Supprimer</a>
+						{% set total = total + commande.quantite * commande.prix %}
 					</div>
 				{% endfor %}
-				<div id="total" class="ligne">Prix total de commande<p id="totalprix">150 €</p></div>
+				<div id="total" class="ligne">Prix total de commande<p id="totalprix">{{ total }}</p></div>
 				
 				<input type="submit" value="Valider Commande">
 				</form>

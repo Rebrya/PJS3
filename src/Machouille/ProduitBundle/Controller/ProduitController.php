@@ -95,7 +95,8 @@ class ProduitController extends Controller {
 			return $this->render ( 'MachouilleProduitBundle:Produit:panier.html.twig', array (
 					"Username" => $_SESSION ['Username'],
 					"commandes" => $commandes,
-					"historique" => $historiques
+					"historique" => $historiques,
+					"total" => 0
 			) );
 		} else
 		return new RedirectResponse ( $this->get ( 'router' )->generate ( 'machouille_login_homepage' ) );	

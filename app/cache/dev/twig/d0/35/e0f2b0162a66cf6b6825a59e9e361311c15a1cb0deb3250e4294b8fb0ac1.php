@@ -96,14 +96,20 @@ class __TwigTemplate_d035e0f2b0162a66cf6b6825a59e9e361311c15a1cb0deb3250e4294b8f
             echo twig_escape_filter($this->env, ($this->getAttribute($context["commande"], "quantite", array()) * $this->getAttribute($context["commande"], "prix", array())), "html", null, true);
             echo " €</p>
 \t\t\t\t\t\t<a href=\"\">Supprimer</a>
-\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+            // line 29
+            $context["total"] = ((isset($context["total"]) ? $context["total"] : $this->getContext($context, "total")) + ($this->getAttribute($context["commande"], "quantite", array()) * $this->getAttribute($context["commande"], "prix", array())));
+            // line 30
+            echo "\t\t\t\t\t</div>
 \t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commande'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
-        echo "\t\t\t\t<div id=\"total\" class=\"ligne\">Prix total de commande<p id=\"totalprix\">150 €</p></div>
+        // line 32
+        echo "\t\t\t\t<div id=\"total\" class=\"ligne\">Prix total de commande<p id=\"totalprix\">";
+        echo twig_escape_filter($this->env, (isset($context["total"]) ? $context["total"] : $this->getContext($context, "total")), "html", null, true);
+        echo "</p></div>
 \t\t\t\t
 \t\t\t\t<input type=\"submit\" value=\"Valider Commande\">
 \t\t\t\t</form>
@@ -112,22 +118,22 @@ class __TwigTemplate_d035e0f2b0162a66cf6b6825a59e9e361311c15a1cb0deb3250e4294b8f
 \t<div id=\"Historique\" class=\"sub-container\">
 \t\t<h3>Historique</h3>
 \t\t";
-        // line 39
+        // line 40
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["historique"]) ? $context["historique"] : $this->getContext($context, "historique")));
         foreach ($context['_seq'] as $context["_key"] => $context["his"]) {
-            // line 40
+            // line 41
             echo "\t\t\t<a href=\"\">Commande numéro : ";
             echo twig_escape_filter($this->env, $this->getAttribute($context["his"], "idcommande", array()), "html", null, true);
             echo ", date du ";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["his"], "date", array()), "Y-m-d"), "html", null, true);
             echo ",
 \t\t\t produit acheté : ";
-            // line 41
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($context["his"], "codeproduit", array()), "html", null, true);
             echo "
 \t\t\t quantité : ";
-            // line 42
+            // line 43
             echo twig_escape_filter($this->env, $this->getAttribute($context["his"], "quantite", array()), "html", null, true);
             echo "</a>
 \t\t\t<br>
@@ -136,7 +142,7 @@ class __TwigTemplate_d035e0f2b0162a66cf6b6825a59e9e361311c15a1cb0deb3250e4294b8f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['his'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 46
         echo "\t\t
 \t</div>
 </div>
@@ -168,6 +174,6 @@ class __TwigTemplate_d035e0f2b0162a66cf6b6825a59e9e361311c15a1cb0deb3250e4294b8f
 
     public function getDebugInfo()
     {
-        return array (  140 => 45,  131 => 42,  127 => 41,  120 => 40,  116 => 39,  106 => 31,  96 => 27,  92 => 26,  88 => 25,  84 => 24,  80 => 23,  77 => 22,  73 => 21,  69 => 20,  55 => 8,  52 => 7,  46 => 6,  39 => 4,  33 => 2,  30 => 1,);
+        return array (  146 => 46,  137 => 43,  133 => 42,  126 => 41,  122 => 40,  110 => 32,  103 => 30,  101 => 29,  96 => 27,  92 => 26,  88 => 25,  84 => 24,  80 => 23,  77 => 22,  73 => 21,  69 => 20,  55 => 8,  52 => 7,  46 => 6,  39 => 4,  33 => 2,  30 => 1,);
     }
 }

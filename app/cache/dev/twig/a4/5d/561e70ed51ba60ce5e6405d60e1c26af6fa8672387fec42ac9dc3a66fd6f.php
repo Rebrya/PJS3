@@ -1,6 +1,6 @@
 <?php
 
-/* WebProfilerBundle:Collector:memory.html.twig */
+/* @WebProfiler/Collector/memory.html.twig */
 class __TwigTemplate_a45d561e70ed51ba60ce5e6405d60e1c26af6fa8672387fec42ac9dc3a66fd6f extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -62,7 +62,7 @@ class __TwigTemplate_a45d561e70ed51ba60ce5e6405d60e1c26af6fa8672387fec42ac9dc3a6
 
     public function getTemplateName()
     {
-        return "WebProfilerBundle:Collector:memory.html.twig";
+        return "@WebProfiler/Collector/memory.html.twig";
     }
 
     public function isTraitable()
