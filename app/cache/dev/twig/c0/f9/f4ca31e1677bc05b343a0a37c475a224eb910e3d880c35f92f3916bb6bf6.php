@@ -56,7 +56,7 @@ class __TwigTemplate_c0f9f4ca31e1677bc05b343a0a37c475a224eb910e3d880c35f92f3916b
 \t<div id=message class=\"sub-container\">
 \t\t<form action=\"\" method=post>
 \t\t\t<h3>Vous pouvez nous envoyer un email</h3>
-\t\t\t<label>Object de votre message</label>
+\t\t\t<label>Objet de votre message</label>
 \t\t\t<input type=\"text\">
 \t\t\t<label>Votre message</label>
 \t\t\t<textarea rows=\"10\" cols=\"60\"></textarea>

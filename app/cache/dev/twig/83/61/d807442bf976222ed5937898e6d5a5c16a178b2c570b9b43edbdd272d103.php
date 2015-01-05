@@ -113,7 +113,7 @@ class __TwigTemplate_8361d807442bf976222ed5937898e6d5a5c16a178b2c570b9b43edbdd27
 \t
 \t<div id=\"divers\">
 \t\t<div class=\"block\">Plus de 500 produits</div>
-\t\t<div class=\"block\">Livraison gratuit sous 72 heures</div>
+\t\t<div class=\"block\">Livraison gratuite*</div>
 \t\t<div class=\"block\">Paiement securisé</div>
 \t</div>
 </div>
